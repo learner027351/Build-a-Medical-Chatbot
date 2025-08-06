@@ -9,10 +9,12 @@ from langchain_pinecone import PineconeVectorStore
 load_dotenv()
 
 PINECONE_API_KEY=os.getenv("PINECONE_API_KEY")
-OPENAI_API_KEY=os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY=os.getenv("GEMINI_API_KEY")
+# GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
 
 os.environ["PINECONE_API_KEY"]=PINECONE_API_KEY
 os.environ["OPENAI_API_KEY"]=OPENAI_API_KEY
+# os.environ["OPENAI_API_KEY"]=GEMINI_API_KEY
 
 extracted_data=load_pdf_files(data=r'C:\Users\VINEET KUMAR SINGH\OneDrive\Desktop\MedicalChatbot\Build-a-Medical-Chatbot\data')
 filter_data=filter_to_minimal_docs(extracted_data)
